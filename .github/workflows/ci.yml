@@ -46,3 +46,19 @@ jobs:
                       ok = False
           raise SystemExit(0 if ok else 1)
           PY
+
+      - name: Build package archives
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          for manifest in */manifest.json; do
+            package_dir="${manifest%/manifest.json}"
+            python3 marginalia-sdk/tools/build_package.py "$package_dir" --profile publish --output dist --json
+          done
+
+      - name: Upload package archives
+        uses: actions/upload-artifact@v6
+        with:
+          name: marginalia-example-packages
+          path: dist/*.mpkg.zip
+          if-no-files-found: error
