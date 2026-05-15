@@ -1,0 +1,17 @@
+{
+  "init": {
+    "description": "Prepare reading statistics storage."
+  },
+  "bookOpen": {
+    "description": "Start a reading session."
+  },
+  "bookClose": {
+    "description": "Finalize a reading session."
+  },
+  "pageTurn": {
+    "description": "Record a page turn event."
+  },
+  "shutdown": {
+    "description": "Flush and release reader hook state."
+  }
+}

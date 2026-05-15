@@ -1,0 +1,14 @@
+{
+  "init": {
+    "description": "Prepare sleep-screen module state."
+  },
+  "renderFrame": {
+    "description": "Render the current Game of Life grid to the sleep-screen surface."
+  },
+  "advance": {
+    "description": "Advance the grid by one generation."
+  },
+  "shutdown": {
+    "description": "Release sleep-screen module state."
+  }
+}

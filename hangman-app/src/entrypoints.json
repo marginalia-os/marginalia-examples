@@ -1,0 +1,14 @@
+{
+  "init": {
+    "description": "Prepare app resources."
+  },
+  "launch": {
+    "description": "Start the Hangman app activity."
+  },
+  "exit": {
+    "description": "Persist game state and leave the app activity."
+  },
+  "shutdown": {
+    "description": "Release app resources."
+  }
+}

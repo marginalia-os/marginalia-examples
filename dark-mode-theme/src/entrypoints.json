@@ -1,0 +1,8 @@
+{
+  "init": {
+    "description": "Register dark theme tokens with the theme host."
+  },
+  "shutdown": {
+    "description": "Unregister theme tokens and release package state."
+  }
+}
