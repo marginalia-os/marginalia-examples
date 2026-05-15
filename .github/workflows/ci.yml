@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/checkout@v6
+        with:
+          repository: marginalia-os/marginalia-sdk
+          path: marginalia-sdk
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install SDK dependencies
+        run: python -m pip install -r marginalia-sdk/requirements.txt
+
+      - name: Validate package manifests
+        run: python marginalia-sdk/tools/validate_manifest.py --profile publish */manifest.json
+
+      - name: Check firmware-safe package paths
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          safe = re.compile(r'^[A-Za-z0-9._-]+$')
+          ok = True
+          for package in [p for p in Path('.').iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'marginalia-sdk']:
+              for path in package.rglob('*'):
+                  if not path.is_file():
+                      continue
+                  rel = path.relative_to(package)
+                  if any(part.startswith('.') or not safe.match(part) for part in rel.parts):
+                      print(f'unsafe path: {package}/{rel}')
+                      ok = False
+          raise SystemExit(0 if ok else 1)
+          PY
