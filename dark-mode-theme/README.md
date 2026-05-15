@@ -9,11 +9,12 @@ hard-coded firmware setting.
 Current behavior:
 
 - inverts normal OS display updates after each screen render
+- exposes an extension setting named `Invert screen`
 - leaves the package install, enable, disable, and uninstall flow unchanged
 - unloads cleanly when the package is disabled or uninstalled
 
 Release archive:
 
 ```text
-https://github.com/marginalia-os/marginalia-examples/releases/download/examples-v0.1.1/org.marginalia.examples.dark-mode-0.1.1.mpkg.zip
+https://github.com/marginalia-os/marginalia-examples/releases/download/examples-v0.1.2/org.marginalia.examples.dark-mode-0.1.2.mpkg.zip
 ```
