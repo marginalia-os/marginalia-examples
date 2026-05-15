@@ -11,9 +11,10 @@ This repo shows the expected layout for packages that target the Marginalia SDK 
 - `reading-stats-module`
 - `hangman-app`
 
-Each example is a complete side-loadable folder for current firmware package management. The firmware can upload,
-install, enable, disable, and uninstall these packages now. Runtime execution is intentionally still represented by
-placeholder `src/entrypoints.json` files until Marginalia grows module and app hosts.
+Each example is a complete side-loadable folder for current firmware package management. The firmware can upload package
+folders or SDK-built `.mpkg.zip` archives, install them from the inbox, enable or disable them, and uninstall them.
+Runtime execution is intentionally still represented by placeholder `src/entrypoints.json` files until Marginalia grows
+module and app hosts.
 
 ## Try one on a device
 
@@ -30,3 +31,15 @@ From this repo:
 ```sh
 python3 ../marginalia-sdk/tools/validate_manifest.py --profile publish */manifest.json
 ```
+
+## Build archives
+
+```sh
+mkdir -p dist
+for manifest in */manifest.json; do
+  package_dir="${manifest%/manifest.json}"
+  python3 ../marginalia-sdk/tools/build_package.py "$package_dir" --profile publish --output dist
+done
+```
+
+Generated archives are release artifacts and are ignored in this repo.
