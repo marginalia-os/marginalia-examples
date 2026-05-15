@@ -2,11 +2,18 @@
 
 Reference `theme` module package.
 
-This package is intentionally not executable yet. It demonstrates the folder shape and manifest metadata that the
-firmware can side-load, install, enable, disable, and uninstall today.
+When installed and enabled on supported firmware, this package enables an OS-wide inverted screen theme. The package
+uses `src/theme.json` to declare a firmware-hosted theme mode, so it remains a normal `.mpkg.zip` package rather than a
+hard-coded firmware setting.
 
-Expected future behavior:
+Current behavior:
 
-- register a high-contrast dark UI palette
-- apply firmware-wide theme colors through the theme host
-- unload cleanly when disabled
+- inverts normal OS display updates after each screen render
+- leaves the package install, enable, disable, and uninstall flow unchanged
+- unloads cleanly when the package is disabled or uninstalled
+
+Release archive:
+
+```text
+https://github.com/marginalia-os/marginalia-examples/releases/download/examples-v0.1.1/org.marginalia.examples.dark-mode-0.1.1.mpkg.zip
+```
