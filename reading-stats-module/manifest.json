@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "org.marginalia.examples.reading-stats",
+  "name": "Reading Stats",
+  "version": "0.1.0",
+  "kind": "reader_module",
+  "execution": "module",
+  "summary": "Collects reading session statistics",
+  "author": "Marginalia",
+  "license": "MIT",
+  "target": {
+    "devices": ["xteink-x3", "xteink-x4"],
+    "chipFamilies": ["esp32-c3"],
+    "minFirmware": "0.1.0",
+    "apiLevel": 1,
+    "ramClass": "low",
+    "requiresPSRAM": false
+  },
+  "permissions": ["reader_state", "storage", "settings"],
+  "dependencies": [],
+  "entrypoints": {
+    "onLoad": "init",
+    "onBookOpen": "bookOpen",
+    "onBookClose": "bookClose",
+    "onPageTurn": "pageTurn",
+    "onUnload": "shutdown"
+  },
+  "assets": {
+    "icon": "icon.png",
+    "preview": "preview.png"
+  },
+  "integrity": {
+    "sha256": "replace-me"
+  }
+}

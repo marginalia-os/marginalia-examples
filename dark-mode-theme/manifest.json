@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "org.marginalia.examples.dark-mode",
+  "name": "Dark Mode",
+  "version": "0.1.0",
+  "kind": "theme",
+  "execution": "module",
+  "summary": "A simple dark theme for the Marginalia reader UI",
+  "author": "Marginalia",
+  "license": "MIT",
+  "target": {
+    "devices": ["xteink-x3", "xteink-x4"],
+    "chipFamilies": ["esp32-c3"],
+    "minFirmware": "0.1.0",
+    "apiLevel": 1,
+    "ramClass": "low",
+    "requiresPSRAM": false
+  },
+  "permissions": ["display", "settings"],
+  "dependencies": [],
+  "entrypoints": {
+    "onLoad": "init",
+    "onUnload": "shutdown"
+  },
+  "assets": {
+    "icon": "icon.png",
+    "preview": "preview.png"
+  },
+  "integrity": {
+    "sha256": "replace-me"
+  }
+}

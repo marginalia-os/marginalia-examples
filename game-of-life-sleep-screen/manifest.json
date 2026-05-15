@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "org.marginalia.examples.game-of-life",
+  "name": "Game of Life",
+  "version": "0.1.0",
+  "kind": "sleep_screen",
+  "execution": "module",
+  "summary": "Conway's Game of Life for the sleep screen",
+  "author": "Marginalia",
+  "license": "MIT",
+  "target": {
+    "devices": ["xteink-x3", "xteink-x4"],
+    "chipFamilies": ["esp32-c3"],
+    "minFirmware": "0.1.0",
+    "apiLevel": 1,
+    "ramClass": "low",
+    "requiresPSRAM": false
+  },
+  "permissions": ["display", "sleep_state"],
+  "dependencies": [],
+  "entrypoints": {
+    "onLoad": "init",
+    "onSleepEnter": "renderFrame",
+    "onSleepTick": "advance",
+    "onUnload": "shutdown"
+  },
+  "assets": {
+    "icon": "icon.png",
+    "preview": "preview.png"
+  },
+  "integrity": {
+    "sha256": "replace-me"
+  }
+}

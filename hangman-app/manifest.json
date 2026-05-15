@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "org.marginalia.examples.hangman",
+  "name": "Hangman",
+  "version": "0.1.0",
+  "kind": "app",
+  "execution": "app",
+  "summary": "A simple standalone Hangman game",
+  "author": "Marginalia",
+  "license": "MIT",
+  "target": {
+    "devices": ["xteink-x3", "xteink-x4"],
+    "chipFamilies": ["esp32-c3"],
+    "minFirmware": "0.1.0",
+    "apiLevel": 1,
+    "ramClass": "low",
+    "requiresPSRAM": false
+  },
+  "permissions": ["display", "input", "storage"],
+  "dependencies": [],
+  "entrypoints": {
+    "onLoad": "init",
+    "onAppLaunch": "launch",
+    "onAppExit": "exit",
+    "onUnload": "shutdown"
+  },
+  "assets": {
+    "icon": "icon.png",
+    "preview": "preview.png"
+  },
+  "integrity": {
+    "sha256": "replace-me"
+  }
+}
