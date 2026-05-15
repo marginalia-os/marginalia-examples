@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "org.marginalia.examples.dark-mode",
   "name": "Dark Mode",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "kind": "theme",
   "execution": "module",
   "summary": "An OS-wide inverted screen theme for Marginalia",
@@ -17,6 +17,14 @@
     "requiresPSRAM": false
   },
   "permissions": ["display", "settings"],
+  "settings": [
+    {
+      "id": "invertScreen",
+      "label": "Invert screen",
+      "type": "boolean",
+      "default": true
+    }
+  ],
   "dependencies": [],
   "entrypoints": {
     "onLoad": "init",

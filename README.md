@@ -49,5 +49,5 @@ Generated archives are release artifacts and are ignored in this repo.
 Release assets are published as `.mpkg.zip` files. The Dark Mode package is available at:
 
 ```text
-https://github.com/marginalia-os/marginalia-examples/releases/download/examples-v0.1.1/org.marginalia.examples.dark-mode-0.1.1.mpkg.zip
+https://github.com/marginalia-os/marginalia-examples/releases/download/examples-v0.1.2/org.marginalia.examples.dark-mode-0.1.2.mpkg.zip
 ```
