@@ -2,5 +2,6 @@
   "schemaVersion": 1,
   "scope": "os",
   "mode": "invert-screen",
-  "textAntialiasing": "package-setting"
+  "textAntialiasing": "package-setting",
+  "readerRefresh": "package-setting"
 }
