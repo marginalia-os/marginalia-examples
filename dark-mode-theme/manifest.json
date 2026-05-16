@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "org.marginalia.examples.dark-mode",
   "name": "Dark Mode",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "kind": "theme",
   "execution": "module",
   "summary": "An OS-wide inverted screen theme for Marginalia",
@@ -23,6 +23,12 @@
       "label": "Invert screen",
       "type": "boolean",
       "default": true
+    },
+    {
+      "id": "textAntialiasing",
+      "label": "Antialiasing",
+      "type": "boolean",
+      "default": false
     }
   ],
   "dependencies": [],
