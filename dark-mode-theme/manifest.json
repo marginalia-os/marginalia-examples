@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "org.marginalia.examples.dark-mode",
   "name": "Dark Mode",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "kind": "theme",
   "execution": "module",
   "summary": "An OS-wide inverted screen theme for Marginalia",
@@ -29,6 +29,13 @@
       "label": "Antialiasing",
       "type": "boolean",
       "default": false
+    },
+    {
+      "id": "readerRefresh",
+      "label": "Reader cleanup",
+      "type": "enum",
+      "default": "5-pages",
+      "options": ["off", "every-page", "5-pages", "10-pages"]
     }
   ],
   "dependencies": [],
