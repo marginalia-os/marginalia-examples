@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "org.marginalia.integrations.project-gutenberg",
+  "name": "Project Gutenberg",
+  "version": "0.1.0",
+  "kind": "integration",
+  "execution": "module",
+  "summary": "Adds Project Gutenberg as a free public-domain book catalog",
+  "author": "Marginalia",
+  "license": "MIT",
+  "target": {
+    "devices": ["xteink-x3", "xteink-x4"],
+    "chipFamilies": ["esp32-c3"],
+    "minFirmware": "1.3.0",
+    "apiLevel": 1,
+    "ramClass": "low",
+    "requiresPSRAM": false
+  },
+  "permissions": ["network"],
+  "dependencies": [],
+  "entrypoints": {
+    "onLoad": "catalogProvider",
+    "onUnload": "shutdown"
+  },
+  "integrity": {
+    "sha256": "replace-me"
+  }
+}

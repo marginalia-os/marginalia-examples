@@ -1,0 +1,8 @@
+{
+  "catalogProvider": {
+    "description": "Expose static OPDS catalog providers from src/opds.json."
+  },
+  "shutdown": {
+    "description": "Remove package-owned catalog providers when disabled or uninstalled."
+  }
+}

@@ -10,11 +10,14 @@ This repo shows the expected layout for packages that target the Marginalia SDK 
 - `game-of-life-sleep-screen`
 - `reading-stats-module`
 - `hangman-app`
+- `project-gutenberg-integration`
 
 Each example is a complete side-loadable folder for current firmware package management. The firmware can upload package
 folders or SDK-built `.mpkg.zip` archives, install them from the inbox, enable or disable them, and uninstall them.
 Runtime execution is intentionally still represented by placeholder `src/entrypoints.json` files until Marginalia grows
 module and app hosts.
+The Project Gutenberg integration is descriptor-driven: current firmware can read its `src/opds.json` provider and show
+Project Gutenberg in the OPDS browser after the package is installed.
 
 ## Try one on a device
 

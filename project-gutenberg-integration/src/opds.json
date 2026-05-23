@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "providers": [
+    {
+      "name": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/search.opds/",
+      "searchUrl": "https://www.gutenberg.org/ebooks/search.opds/?query={searchTerms}"
+    }
+  ]
+}
