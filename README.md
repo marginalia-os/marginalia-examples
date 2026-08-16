@@ -11,11 +11,13 @@ This repo shows the expected layout for packages that target the Marginalia SDK 
 - `reading-stats-module`
 - `hangman-app`
 - `project-gutenberg-integration`
+- `declarative-theme-v2`
 
 Each example is a complete side-loadable folder for current firmware package management. The firmware can upload package
 folders or SDK-built `.mpkg.zip` archives, install them from the inbox, enable or disable them, and uninstall them.
 Runtime execution is intentionally still represented by placeholder `src/entrypoints.json` files until Marginalia grows
-module and app hosts. Static contribution packages, such as Project Gutenberg, do not need runtime entrypoints.
+module and app hosts. Static contribution packages, including the manifest v2 `declarative-theme-v2` fixture and Project
+Gutenberg, do not need runtime entrypoints.
 
 ## Try one on a device
 
