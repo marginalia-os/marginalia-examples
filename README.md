@@ -15,9 +15,11 @@ This repo shows the expected layout for packages that target the Marginalia SDK 
 
 Each example is a complete side-loadable folder for current firmware package management. The firmware can upload package
 folders or SDK-built `.mpkg.zip` archives, install them from the inbox, enable or disable them, and uninstall them.
-Runtime execution is intentionally still represented by placeholder `src/entrypoints.json` files until Marginalia grows
-module and app hosts. Static contribution packages, including the manifest v2 `declarative-theme-v2` fixture and Project
-Gutenberg, do not need runtime entrypoints.
+Runtime execution in the legacy examples is intentionally still represented by placeholder `src/entrypoints.json` files.
+The firmware now has the first native Service host, but no example claims a runnable native artifact until the C3 fixture
+and catalog role capability are validated. Native App and Provider examples remain gated on the foreground frame/router
+and typed provider ABI respectively. Static contribution packages, including the manifest v2 `declarative-theme-v2`
+fixture and Project Gutenberg, do not need runtime entrypoints.
 
 ## Try one on a device
 
