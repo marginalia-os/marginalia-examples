@@ -18,6 +18,8 @@ folders or SDK-built `.mpkg.zip` archives, stage them from the inbox, enable or 
 Installation is not a hot swap: firmware may return `activationPending`, then promotes the candidate on the next boot
 and keeps the previous version until the trial is confirmed. An example README must distinguish staged installation from
 runtime support and must not claim that a package is running merely because its archive was accepted.
+Uninstall is also staged: firmware may return `removalPending` until reboot and a short health trial confirms removal;
+the running process is not hot-removed and package state is preserved by default.
 Runtime execution in the legacy examples is intentionally still represented by placeholder `src/entrypoints.json` files.
 The firmware now has the first native Service host, but no example claims a runnable native artifact until the C3 fixture
 and catalog role capability are validated. Native App and Provider examples remain gated on the foreground frame/router
