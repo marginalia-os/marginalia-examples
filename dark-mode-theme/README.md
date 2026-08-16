@@ -13,7 +13,7 @@ Current behavior:
 - exposes an `Antialiasing` package setting, defaulting off to avoid grayscale overlays fighting the inverted pass
 - exposes a `Reader cleanup` package setting for periodic dark reader cleanup frames to reduce ghosting
 - exposes an extension setting named `Invert screen`
-- leaves the package install, enable, disable, and uninstall flow unchanged
+- leaves the package stage, enable, disable, and uninstall flow unchanged; activation happens at a boot boundary
 - unloads cleanly when the package is disabled or uninstalled
 
 Release archive:

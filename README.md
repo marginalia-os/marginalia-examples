@@ -14,12 +14,19 @@ This repo shows the expected layout for packages that target the Marginalia SDK 
 - `declarative-theme-v2`
 
 Each example is a complete side-loadable folder for current firmware package management. The firmware can upload package
-folders or SDK-built `.mpkg.zip` archives, install them from the inbox, enable or disable them, and uninstall them.
+folders or SDK-built `.mpkg.zip` archives, stage them from the inbox, enable or disable them, and uninstall them.
+Installation is not a hot swap: firmware may return `activationPending`, then promotes the candidate on the next boot
+and keeps the previous version until the trial is confirmed. An example README must distinguish staged installation from
+runtime support and must not claim that a package is running merely because its archive was accepted.
 Runtime execution in the legacy examples is intentionally still represented by placeholder `src/entrypoints.json` files.
 The firmware now has the first native Service host, but no example claims a runnable native artifact until the C3 fixture
 and catalog role capability are validated. Native App and Provider examples remain gated on the foreground frame/router
 and typed provider ABI respectively. Static contribution packages, including the manifest v2 `declarative-theme-v2`
 fixture and Project Gutenberg, do not need runtime entrypoints.
+
+Manifest v2 examples should keep `dataSchema` stable across releases until a firmware migration contract exists. The
+package store preserves user state outside the archive; adding a component or changing its availability is not a reason
+to reset settings automatically.
 
 ## Try one on a device
 

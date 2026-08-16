@@ -2,8 +2,8 @@
 
 Reference standalone `app` package.
 
-This package is intentionally not executable yet. It demonstrates an app package that the firmware can side-load, install,
-enable, disable, and uninstall today.
+This package is intentionally not executable yet. It demonstrates an app package that the firmware can side-load, stage
+for a later boot, enable, disable, and uninstall today.
 
 Expected future behavior:
 
