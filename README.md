@@ -35,13 +35,16 @@ Runtime execution in the legacy examples is intentionally still represented by p
 The firmware now has the first native Service host and the SDK/firmware ABI-minor-2 package asset/data storage records.
 `native-storage-service` is the first real ESP32-C3 native artifact fixture: it is preflighted and admitted by the
 Service compatibility profile, but remains hardware-gated until loader, recovery, and X3/X4 behavior are exercised
-together. Native App and Provider examples remain gated on the foreground frame/router and typed provider ABI
-respectively. Static contribution packages, including the manifest v2 `declarative-theme-v2` fixture and Project
-Gutenberg, do not need runtime entrypoints.
+together. The hardware-only `native-smoke-app` and `native-reader-sync-provider` fixtures now cover the public App and
+typed Provider shapes respectively; both remain gated on their role-specific foreground or network/credential hosts
+and physical matrix results. Static contribution packages, including the manifest v2 `declarative-theme-v2` fixture and
+Project Gutenberg, do not need runtime entrypoints.
 
-The hardware fixture is deliberately a separate category: its ESP32-C3 ELF
-can be built and preflighted, but the SDK and firmware still keep App role
-admission gated until physical X3/X4 results exist.
+Hardware fixtures are deliberately a separate category: their ESP32-C3 ELFs
+can be built and preflighted, but they are excluded from the registry/Hub
+release sweep and the SDK/firmware still keep App and Provider admission gated
+until physical X3/X4 and capability-host results exist. See
+[`hardware-fixtures/README.md`](./hardware-fixtures/README.md).
 
 Manifest v2 examples should keep `dataSchema` stable across releases until a firmware migration contract exists. The
 package store preserves user state outside the archive; adding a component or changing its availability is not a reason

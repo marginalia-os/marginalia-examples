@@ -18,11 +18,16 @@ Current examples:
 Hardware-only fixtures live under `hardware-fixtures/` and are intentionally
 excluded from the normal publish sweep. `hardware-fixtures/native-smoke-app`
 is a real ESP32-C3 App artifact for the X3/X4 validation matrix, not a claim
-that the production App role is currently admitted.
+that the production App role is currently admitted. The sibling
+`hardware-fixtures/native-reader-sync-provider` is the deterministic typed
+`reader.sync/1` Provider artifact; it is likewise not a claim that package
+network or credential access is currently admitted.
 
 Runtime execution in the legacy examples is still placeholder-driven. `native-storage-service` is the exception: it is a
 real ESP32-C3 Service artifact for the firmware's current native Service host, but remains hardware-gated until loader,
-recovery, and X3/X4 behavior are exercised together. Do not expand that claim to App or Provider packages.
+recovery, and X3/X4 behavior are exercised together. App and Provider fixtures
+are source-reviewable matrix inputs only; do not expand their existence into a
+claim of current role admission.
 
 ## Common Commands
 
