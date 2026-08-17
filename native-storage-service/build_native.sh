@@ -34,6 +34,8 @@ mkdir -p "$package_dir/bin/esp32-c3" "$package_dir/build"
   -o "$package_dir/bin/esp32-c3/module.native" \
   "$package_dir/src/module.c"
 
+chmod 0644 "$package_dir/bin/esp32-c3/module.native"
+
 if command -v sha256sum >/dev/null 2>&1; then
   hash=$(sha256sum "$package_dir/bin/esp32-c3/module.native" | awk '{print $1}')
 else
