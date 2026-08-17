@@ -45,7 +45,8 @@ admission gated until physical X3/X4 results exist.
 
 Manifest v2 examples should keep `dataSchema` stable across releases until a firmware migration contract exists. The
 package store preserves user state outside the archive; adding a component or changing its availability is not a reason
-to reset settings automatically.
+to reset settings automatically. Component IDs are stable state identities: changing a component's role or contract
+requires a new component ID instead of silently reusing the old state.
 
 ## Try one on a device
 
