@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "id": "org.marginalia.examples.native-storage",
+  "name": "Native Storage Service",
+  "version": "0.1.0",
+  "dataSchema": 1,
+  "summary": "A small native Service that exercises package-scoped data storage",
+  "author": "Marginalia",
+  "license": "MIT",
+  "target": {
+    "devices": [
+      "xteink-x3",
+      "xteink-x4"
+    ],
+    "architectures": [
+      "esp32-c3"
+    ],
+    "osApi": {
+      "major": 1,
+      "minMinor": 0
+    },
+    "minFirmware": "1.3.0",
+    "nativeAbi": "marginalia-c-1",
+    "ramClass": "low",
+    "requiresPSRAM": false
+  },
+  "components": [
+    {
+      "id": "storage-service",
+      "type": "service",
+      "contract": "storage.demo/1",
+      "activation": "manual",
+      "requires": [
+        "package.storage"
+      ],
+      "entrypoint": "marginalia_module_entry_v1"
+    }
+  ],
+  "artifact": {
+    "format": "native-module",
+    "path": "bin/esp32-c3/module.native",
+    "sha256": "c3210299d1c0e5e7e2096aef925bb7aa40c2772591168c9bba1fd9e89bab4fde"
+  },
+  "integrity": {
+    "sha256": "replace-me"
+  }
+}

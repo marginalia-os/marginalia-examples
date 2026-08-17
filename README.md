@@ -12,6 +12,7 @@ This repo shows the expected layout for packages that target the Marginalia SDK 
 - `hangman-app`
 - `project-gutenberg-integration`
 - `declarative-theme-v2`
+- `native-storage-service`
 
 Each example is a complete side-loadable folder for current firmware package management. The firmware can upload package
 folders or SDK-built `.mpkg.zip` archives, stage them from the inbox, enable or disable them, and uninstall them.
@@ -21,9 +22,10 @@ runtime support and must not claim that a package is running merely because its 
 Uninstall is also staged: firmware may return `removalPending` until reboot and a short health trial confirms removal;
 the running process is not hot-removed and package state is preserved by default.
 Runtime execution in the legacy examples is intentionally still represented by placeholder `src/entrypoints.json` files.
-The firmware now has the first native Service host and the SDK/firmware ABI-minor-2 package asset/data storage records,
-but no example claims a runnable native artifact until the C3 fixture, storage replay, and catalog role capability are
-validated. Native App and Provider examples remain gated on the foreground frame/router and typed provider ABI
+The firmware now has the first native Service host and the SDK/firmware ABI-minor-2 package asset/data storage records.
+`native-storage-service` is the first real ESP32-C3 native artifact fixture: it is preflighted and admitted by the
+Service compatibility profile, but remains hardware-gated until loader, recovery, and X3/X4 behavior are exercised
+together. Native App and Provider examples remain gated on the foreground frame/router and typed provider ABI
 respectively. Static contribution packages, including the manifest v2 `declarative-theme-v2` fixture and Project
 Gutenberg, do not need runtime entrypoints.
 
