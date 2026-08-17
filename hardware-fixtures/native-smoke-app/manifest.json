@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "id": "org.marginalia.fixtures.native-smoke-app",
+  "name": "Native Smoke App Fixture",
+  "version": "0.1.0",
+  "dataSchema": 1,
+  "summary": "Hardware-only foreground App fixture for the X3/X4 native runtime matrix",
+  "author": "Marginalia",
+  "license": "MIT",
+  "target": {
+    "devices": [
+      "xteink-x3",
+      "xteink-x4"
+    ],
+    "architectures": [
+      "esp32-c3"
+    ],
+    "osApi": {
+      "major": 1,
+      "minMinor": 0
+    },
+    "minFirmware": "1.3.0",
+    "nativeAbi": "marginalia-c-1",
+    "ramClass": "low",
+    "requiresPSRAM": false
+  },
+  "components": [
+    {
+      "id": "smoke-app",
+      "type": "app",
+      "activation": "on-demand",
+      "requires": [
+        "display",
+        "input"
+      ],
+      "entrypoint": "marginalia_module_entry_v1"
+    }
+  ],
+  "artifact": {
+    "format": "native-module",
+    "path": "bin/esp32-c3/module.native",
+    "sha256": "1abf32d5db8e41fa4b9485d3b593f7a2ba9d907e32c9db197d730d67ae4f6924"
+  },
+  "integrity": {
+    "sha256": "fixture-not-for-publish"
+  }
+}
