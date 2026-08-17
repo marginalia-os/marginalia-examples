@@ -27,11 +27,11 @@ Fixtures:
 From this repository:
 
 ```sh
-./native-smoke-app/build_native.sh
+./hardware-fixtures/native-smoke-app/build_native.sh
 python3 ../marginalia-sdk/tools/build_package.py hardware-fixtures/native-smoke-app \
   --profile local --output /tmp/marginalia-hardware-fixtures
 
-./native-reader-sync-provider/build_native.sh
+./hardware-fixtures/native-reader-sync-provider/build_native.sh
 python3 ../marginalia-sdk/tools/build_package.py hardware-fixtures/native-reader-sync-provider \
   --profile local --output /tmp/marginalia-hardware-fixtures
 ```
