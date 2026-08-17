@@ -10,6 +10,11 @@ FreeRTOS, a filesystem header, a raw SD path, or a Marginalia firmware header.
 The only persistent capability it receives is the host-owned
 `package.storage` contract from the SDK ABI header.
 
+The Service uses `boot` activation: after the user installs and leaves the
+package enabled, the OS starts it through the fixed Service scheduler on the
+next boot. Disabling or uninstalling the package stops it through the same
+recovery-aware lifecycle.
+
 ## Status
 
 This example is an implementation and archive/preflight fixture, not a claim

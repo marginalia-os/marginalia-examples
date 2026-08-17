@@ -29,7 +29,7 @@
       "id": "storage-service",
       "type": "service",
       "contract": "storage.demo/1",
-      "activation": "manual",
+      "activation": "boot",
       "requires": [
         "package.storage"
       ],
