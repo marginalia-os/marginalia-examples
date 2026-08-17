@@ -9,4 +9,5 @@ Expected future behavior:
 
 - observe book open and close events
 - count page turns
-- write compact reading-session summaries to package storage
+- write compact reading-session summaries through the ABI-minor-2 package-data storage contract once this example has a
+  native component and the X3/X4 storage replay fixture is validated

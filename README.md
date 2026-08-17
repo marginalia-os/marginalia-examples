@@ -21,10 +21,11 @@ runtime support and must not claim that a package is running merely because its 
 Uninstall is also staged: firmware may return `removalPending` until reboot and a short health trial confirms removal;
 the running process is not hot-removed and package state is preserved by default.
 Runtime execution in the legacy examples is intentionally still represented by placeholder `src/entrypoints.json` files.
-The firmware now has the first native Service host, but no example claims a runnable native artifact until the C3 fixture
-and catalog role capability are validated. Native App and Provider examples remain gated on the foreground frame/router
-and typed provider ABI respectively. Static contribution packages, including the manifest v2 `declarative-theme-v2`
-fixture and Project Gutenberg, do not need runtime entrypoints.
+The firmware now has the first native Service host and the SDK/firmware ABI-minor-2 package asset/data storage records,
+but no example claims a runnable native artifact until the C3 fixture, storage replay, and catalog role capability are
+validated. Native App and Provider examples remain gated on the foreground frame/router and typed provider ABI
+respectively. Static contribution packages, including the manifest v2 `declarative-theme-v2` fixture and Project
+Gutenberg, do not need runtime entrypoints.
 
 Manifest v2 examples should keep `dataSchema` stable across releases until a firmware migration contract exists. The
 package store preserves user state outside the archive; adding a component or changing its availability is not a reason
